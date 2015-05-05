@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_themecss}>" />
+<!-- RMV: added module header -->
+<{$xoops_module_header}>
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+<script language="javascript" type="text/javascript" src="<{$xoops_imageurl}>script/usingit_js_matrix_background_cfg.js"></script>
+<script language="javascript" type="text/javascript" src="<{$xoops_imageurl}>script/usingit_js_matrix_background.js"></script>
+</head>
+<body>
+  <table cellspacing="0">
+    <tr id="header">
+      <td id="headerlogo"><a href="<{$xoops_url}>/"><img src="<{$xoops_imageurl}>pictures/logo_left.gif" width="67" height="80" alt="Matrix" align="left"/></a></td>
+      <td id="headerbanner"><{$xoops_banner}></td>
+      <td id="headerlogo"><a href="<{$xoops_url}>/"><img src="<{$xoops_imageurl}>pictures/logo_right.gif" width="67" height="80" alt="Matrix" align="right"></a></td>
+    </tr>
+  </table>
+<td>
+  <table cellspacing="0">
+    <tr>
+      <td id="leftcolumn">
+        <!-- Start left blocks loop -->
+        <{foreach item=block from=$xoops_lblocks}>
+          <{include file="default/theme_blockleft.html"}>
+        <{/foreach}>
+        <!-- End left blocks loop -->
+      </td>
+
+      <td id="centercolumn">
+
+        <!-- Display center blocks if any -->
+        <{if $xoops_showcblock == 1}>
+
+        <table cellspacing="0">
+    <tr> <td align="center" colspan="2">
+      <img src="<{$xoops_imageurl}>pictures/logo_center.gif" width="198" height="81" alt="The Matrix..." /></a><p>
+	</td>
+    </tr>
+          <tr>
+            <td id="centerCcolumn" colspan="2">
+            <!-- Start center-center blocks loop -->
+            <{foreach item=block from=$xoops_ccblocks}>
+              <{include file="default/theme_blockcenter_c.html"}>
+            <{/foreach}>
+            <!-- End center-center blocks loop -->
+            </td>
+          </tr>
+          <tr>
+            <td id="centerLcolumn">
+
+            <!-- Start center-left blocks loop -->
+              <{foreach item=block from=$xoops_clblocks}>
+                <{include file="default/theme_blockcenter_l.html"}>
+              <{/foreach}>
+            <!-- End center-left blocks loop -->
+
+            </td><td id="centerRcolumn">
+
+            <!-- Start center-right blocks loop -->
+              <{foreach item=block from=$xoops_crblocks}>
+                <{include file="default/theme_blockcenter_r.html"}>
+              <{/foreach}>
+            <!-- End center-right blocks loop -->
+
+            </td>
+          </tr>
+        </table>
+
+        <{/if}>
+        <!-- End display center blocks -->
+
+        <div id="content">
+          <{$xoops_contents}>
+        </div>
+      </td>
+
+      <{if $xoops_showrblock == 1}>
+
+      <td id="rightcolumn">
+        <!-- Start right blocks loop -->
+        <{foreach item=block from=$xoops_rblocks}>
+          <{include file="default/theme_blockright.html"}>
+        <{/foreach}>
+        <!-- End right blocks loop -->
+      </td>
+      <{/if}>
+    </tr>
+
+  </table>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+      	<td><img src="<{$xoops_imageurl}>pictures/column_bottom_left.gif" width="160" height="213" alt="Matrix" align="right" vertical-align="bottom"></a>
+</td>
+           	<td id="footer"><br /><{$xoops_footer}><br />
+	    	Design : Solo <a href="http://www.wolfpackclan.com" target="_blank">-> new Wolf Pack Clan <-</a>
+		<p></p>
+		</td>
+      	<td><img src="<{$xoops_imageurl}>pictures/column_bottom_right.gif" width="160" height="213" alt="Matrix" align="left" vertical-align="bottom"></a>
+</td>
+        </tr>
+            </table>
+</body>
+</html>
